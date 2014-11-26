@@ -1,0 +1,37 @@
+ <h2>Details of item:</h2>
+ <h3>(edit to change)</h3>
+
+<style>
+div {
+  float:left;
+  line-height:50px;
+}
+</style>
+
+
+  <div style=position:relative;left:20px>
+    Category</br>
+    Title</br>
+    Price</br>
+    Description</br>
+    Email</br>
+  </div>
+
+
+<div style=position:relative;left:40px>
+  <form style="display:inline" action="/posts" method="post" name="the_viewpost_form">
+    <%= @item.category.name %> >> Change to:
+        <select name="category">
+          <option value="Select">Select category</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Jobs">Jobs</option>
+          <option value="Automotive">Automotive</option>
+        </select></br>
+     <input type="text" name="title" value="<%= @item.title %>"></br>
+     <input type="text" name="description" value="<%= @item.price %>"></br>
+    <input type="text" name="description" value="<%= @item.description %>"></br>
+    <input type="text" name="email" value="<%= @item.email %>"></br>
+    <input type="hidden" name="id" value="<%= @item.id %>"></br>
+    <input type="submit" value="Modify it!">
+  </form>
+</div>

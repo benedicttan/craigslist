@@ -1,0 +1,36 @@
+<style>
+  body {
+    background-image:
+    linear-gradient(
+      white,turquoise);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .post {
+    margin: 10px;
+    padding: 10px;
+    width:40%;
+    background-color: turquoise;
+    float: left;
+  }
+
+  #container {
+    height:1000px;
+  }
+
+  a:hover {
+    color: black;
+  }
+</style>
+ <h2>List of posts:</h2>
+ <div id="container" style=padding-left:20px>
+   <% @posts.each do |post| %>
+    <div class=post>
+    <a href="../posts/<%= post.id %>"><%= post.title %></a> << <%= post.category.name %></br>
+    <%= post.price %></br>
+    <%= post.description %></br>
+    Contact: <%= post.email %></br>
+    </div>
+   <% end %>
+</div>

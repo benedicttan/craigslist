@@ -1,0 +1,44 @@
+<h2>Create a new post:</h2>
+
+
+<style>
+div {
+  float:left;
+  line-height:50px;
+}
+</style>
+
+
+
+  <br>
+  <br>
+
+  <div style=position:relative;left:20px>
+    Category</br>
+    Title</br>
+    Description</br>
+    Email</br>
+    Price</br>
+  </div>
+
+  <div style=position:relative;left:40px>
+    <form style="display:inline" action="/createpost" method="post" name="the_viewpost_form">
+      <select name="category">
+        <option value="Select">Select category</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Jobs">Jobs</option>
+        <option value="Automotive">Automotive</option>
+      </select></br>
+
+      <input type="text" name="title"></br>
+
+      <input type="text" name="description"></br>
+
+      <input type="text" name="email"></br>
+
+      <input type="text" name="price"></br>
+
+      <input type="submit" value="Get it!">
+    </form>
+  </div>
+
